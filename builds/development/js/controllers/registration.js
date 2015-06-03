@@ -1,12 +1,14 @@
-myApp.controller('RegistrationController', function($scope) {
-	$scope.name = 'Aton;'
+myApp.controller('RegistrationController',
+	function($scope, $location) {
+	
 
 
-	$scope.$on('$viewContentLoaded', function() {
-		console.log($scope.myform);
+	$scope.login = function() {
+		$location.path('/meetings')
+	} // Login
 
+	$scope.register = function() {
+		$location.path('/meetings')
+	} // Login
 
-	});
-
-});
-// ^^^RegistrationController
+}); // RegistrationController 

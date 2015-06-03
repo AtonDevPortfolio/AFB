@@ -2,11 +2,11 @@
 	<form name="myform"
 		ng-submit="login()"
 		novalidate>
-		
-		<h1>Welcome to Mordor, {{name}}</h1>
-		<p>Register to experience the...</p>
 
-		<input type="email" name="email" placeholder="Email" autofocus
+		<h1>Welcome to Mordor</h1>
+		<p>Welcome back to the...  Log in.</p>
+
+		<input type="email" name="email" placeholder="Email"
 			ng-model="user.email" ng-required="true">
 		<p class="error validationerror"
 			ng-show="myform.email.$invalid && myform.email.$touched">
