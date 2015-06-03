@@ -8,4 +8,4 @@ This is an application for a Lynda.com course on data-driven Angular.js Applicat
 4. Run `> npm-install` to install the project dependencies
 5. Install gulp.js via the Mac terminal or Gitbash on a PC `> npm install -g gulp`
 5. Run the Gulp command `> gulp`
-6. Fire up your browser at `http://localhost:8080`
+6. Fire up your browser at `http://localhost:8080`# Building Real Time Apps with Angular and Firebase.
