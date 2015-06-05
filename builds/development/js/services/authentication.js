@@ -1,7 +1,7 @@
 myApp.factory('Authentication', function($firebase,
-	$firebaseSimpleLogin, $location) {
+	$firebaseSimpleLogin, FIREBASE_URL, $location) {
 
-	var ref = new Firebase('https://meeteater.firebaseio.com/');
+	var ref = new Firebase(FIREBASE_URL);
 	var simpleLogin = $firebaseSimpleLogin(ref);
 
 });
