@@ -15,7 +15,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 		}).
 		when('/meetings', {
 			templateUrl: 'views/meetings.html',
-			controller:  'RegistrationController'
+			controller:  'MeetingsController'
 		}).
 		otherwise({
 			redirectTo: '/login'

@@ -4,11 +4,11 @@ myApp.controller('RegistrationController',
 
 
 	$scope.login = function() {
-		$location.path('/meetings')
+		$location.path('/login')
 	} // Login
 
 	$scope.register = function() {
-		$location.path('/meetings')
+		$location.path('/register')
 	} // Login
 
 }); // RegistrationController 
