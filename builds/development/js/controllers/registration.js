@@ -1,14 +1,23 @@
 myApp.controller('RegistrationController',
-	function($scope, $location) {
-	
+	function($scope, $firebaseSimpleLogin, $location) {
 
+	var ref = new Firebase('https://meeteater.firebaseio.com/');
+	var simpleLogin = $firebaseSimpleLogin(ref);
 
 	$scope.login = function() {
-		$location.path('/login')
+		simpleLogin.$login('password', {
+			email: $scope.user.email,
+			password: $scope.user.password
+		}).then(function(user){
+			$location.path('/meetings');
+		}, function(error) {
+			$scope.message = error.toString();
+		});
+		
 	} // Login
 
 	$scope.register = function() {
-		$location.path('/register')
+		$location.path('/meetings')
 	} // Login
 
 }); // RegistrationController 

@@ -3,8 +3,10 @@
 		ng-submit="login()"
 		novalidate>
 
-		<h1>Welcome to Mordor</h1>
-		<p>Welcome back to the...  Log in.</p>
+		<h1>Welcome</h1>
+		<p>Welcome back to Mordor...  Log in.</p>
+
+		<p class="error forerror" ng-show="message">{{ message }}</p>
 
 		<input type="email" name="email" placeholder="Email"
 			ng-model="user.email" ng-required="true">
