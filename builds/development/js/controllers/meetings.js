@@ -10,7 +10,13 @@ myApp.controller('MeetingsController',
 		meetings.$push ({
 			name: $scope.meetingname,
 			date: Firebase.ServerValue.TIMESTAMP
-		})
+		}).then(function() {
+			$scope.meetingname = '';
+		});
 	}  //Add meeting
+
+	$scope.deleteMeeting=function(key) {
+		meetings.$remove(key);
+	}  // delete Meetings
 
 });  // MeetingsController
