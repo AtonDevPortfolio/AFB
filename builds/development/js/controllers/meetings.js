@@ -5,7 +5,12 @@ myApp.controller('MeetingsController',
 	var meetings = $firebase(ref);
 
 	$scope.meetings = meetings.$asObject();
-	console.log("anything?");
 
+	$scope.addMeeting=function() {
+		meetings.$push ({
+			name: $scope.meetingname,
+			date: Firebase.ServerValue.TIMESTAMP
+		})
+	}  //Add meeting
 
 });  // MeetingsController
