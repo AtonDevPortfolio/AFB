@@ -1,9 +1,6 @@
 myApp.controller('RegistrationController',
 	function($scope, $firebaseSimpleLogin, $location) {
 
-	var ref = new Firebase('https://meeteater.firebaseio.com/');
-	var simpleLogin = $firebaseSimpleLogin(ref);
-
 	$scope.login = function() {
 		simpleLogin.$login('password', {
 			email: $scope.user.email,
